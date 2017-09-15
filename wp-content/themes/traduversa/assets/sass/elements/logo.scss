@@ -1,0 +1,21 @@
+.logo{
+	display: inline-block;
+	width: 250px;
+
+	img{
+		width: 100%;
+		height: auto;
+	}
+
+	@include responsive (860px, 'max'){
+		width: 200px;
+	}
+
+
+	@include responsive (769px, 'max'){
+		display: block;
+		max-width: 150px;
+		margin: 0 auto;
+	}
+
+}

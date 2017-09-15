@@ -1,0 +1,65 @@
+.menu-open header .menu ul {
+    transform: translate3d(0, 0, 0);
+}
+
+.menu {
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+        display: inherit;
+    }
+    li {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0 1vw;
+        border-right: 1px solid $c1;
+        a {
+            color: $c1;
+            font-size: em(16px);
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+    @include responsive (769px, 'max') {
+        ul {
+            position: fixed;
+            top: 0;
+            right: -1px;
+            min-height: 100vh;
+            display: block;
+            padding: 50px 10px;
+            background: $cWhite;
+            z-index: 999;
+            will-change: transform;
+            transform: translate3d(102%, 0, 0);
+            box-shadow: 0 -1px 8px rgba(#000, 0.1), 0 -1px 3px rgba(#000, 0.2);
+            transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            li {
+                text-align: left;
+                display: block;
+                border: none;
+                border-bottom: 1px solid $c1;
+                a {
+                    display: block;
+                    padding: 10px;
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    @include responsive (1024px, 'min') {
+        ul li a {
+            font-size: em(20px);
+        }
+    }
+}
+
+footer .menu {
+    @include responsive (769px, 'max') {
+        display: none;
+    }
+}

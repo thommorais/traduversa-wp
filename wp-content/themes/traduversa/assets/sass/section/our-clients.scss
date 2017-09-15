@@ -1,0 +1,40 @@
+.our-clients{
+    padding: 120px 0;
+
+
+    h1{
+      text-align: center;
+    }
+
+    ul{
+      @extend %flex;
+    }
+
+    .clients-carousel{
+      margin: 120px auto 0;
+      align-items: center;
+
+      li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 200px;
+        max-width: 250px;
+      }
+
+      img{
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+      }
+
+      @include responsive (599px, 'max') {
+        margin: 60px auto 0;
+      }
+
+
+    }
+
+}

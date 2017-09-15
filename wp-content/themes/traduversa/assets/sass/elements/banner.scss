@@ -1,0 +1,18 @@
+#banner-carousel{
+  .wrp{
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hover-banner{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+  }
+}

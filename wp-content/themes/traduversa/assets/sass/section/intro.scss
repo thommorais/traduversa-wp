@@ -1,0 +1,15 @@
+.intro{
+
+  h1{
+    margin-bottom: 50px;
+  }
+
+  article{
+    margin: 0 auto;
+    @extend %paragraph;
+  }
+
+  article p{
+    @extend %paragraph;
+  }
+}
